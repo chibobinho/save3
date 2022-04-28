@@ -90,7 +90,6 @@ export default function App() {
         <AuthStack.Screen name="Perfil" component={Perfil} />
         <AuthStack.Screen name="CadastroTeste" component={CadastroTeste} />
         <AuthStack.Screen name="Cartao" component={Cartao} />
-
       </AuthStack.Navigator>
     </NavigationContainer>
   );
@@ -108,3 +107,4 @@ const styles = StyleSheet.create({
     height: 22,
   },
 });
+

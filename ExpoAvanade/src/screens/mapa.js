@@ -96,10 +96,7 @@ export default class Mapa extends Component {
   }
 
   render() {
-    const modalizeRef = useRef(null);
-    function onOpen() {
-      modalizeRef.current?.open();
-    }
+    
     return (
       <View style={styles.main}>
         <StatusBar
@@ -151,21 +148,9 @@ export default class Mapa extends Component {
 
         <View style={styles.mainSearch}>
           <View style={styles.mainSearchInput}>
-            <TouchableOpacity onPress={onOpen}>
+            <TouchableOpacity>
               <Text style={styles.mainSearchInputText}>Para onde?</Text>
             </TouchableOpacity>
-
-            <Modalize
-              ref={modalizeRef}
-              snapPoint={150}
-            >
-              <View style={styles.testeModal}>
-                <Text>1</Text>
-                <Text>2</Text>
-              </View>
-
-            </Modalize>
-
           </View>
         </View>
 

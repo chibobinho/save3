@@ -102,13 +102,15 @@ export default class Perfil extends Component {
           </View>
         </View>
 
-        <View style={styles.mainCard}>
+        <TouchableOpacity style={styles.mainCard} onPress={() => this.props.navigation.navigate('Carteira')}>
           <Image source={require('../../assets/img/icon_money.png')} style={styles.mainCardImage} />
           <View>
             <Text style={styles.mainCardsTextName}>Saldo</Text>
             <Text style={styles.mainCardsTextEmail}>R${this.state.saldo}</Text>
           </View>
-        </View>
+          <Text style={styles.mainCardsTextTrade2}>Adicionar</Text>
+          <Image source={require('../../assets/img/icon_next.png')} style={styles.mainCardNext} />
+        </TouchableOpacity>
 
         <TouchableOpacity style={styles.mainCard} onPress={() => this.props.navigation.navigate('TrocaRodas')}>
           <Image source={require('../../assets/img/icon_wheel.png')} style={styles.mainCardImage} />
@@ -232,6 +234,13 @@ const styles = StyleSheet.create({
   },
   mainCardsTextTrade: {
     marginLeft: 180,
+    fontSize: 14,
+    color: '#000000',
+    fontFamily: 'ABeeZee_400Regular',
+
+  },
+  mainCardsTextTrade2: {
+    marginLeft: 210,
     fontSize: 14,
     color: '#000000',
     fontFamily: 'ABeeZee_400Regular',
